@@ -39,16 +39,53 @@ follow_trader/
 
 ## Development Status
 
-Currently in Phase 1: Message Extraction Agent
-- Step 1: ✅ Project structure setup (completed)
-- Step 1.5: ✅ Message data extracted to dc_tracker.json (619 messages)
+✅ **Phase 1 Complete**: Message Extraction Agent
+- ✅ Project structure setup
+- ✅ Data models (Message, TradingAction)
+- ✅ Platform interface and JSON adapter
+- ✅ Database schema and storage
+- ✅ LLM-based extraction agent
+- ✅ Action validator
+- ✅ Message processor service
+- ✅ Streamlit monitoring dashboard
+- ✅ Configuration system
 
-## Next Steps
+## Usage
 
-- Step 2: Create data models (Message, TradingAction)
-- Step 3: Implement JSON message reader adapter
-- Step 4: Build LLM-based extraction agent
-- Step 5: Create monitoring dashboard
+### 1. Test the Pipeline (without LLM)
+
+```bash
+python3 test_pipeline.py
+```
+
+This tests all components without making API calls.
+
+### 2. Run Full Extraction (requires API key)
+
+```bash
+# Set your API key
+export OPENAI_API_KEY="your-key-here"
+
+# Run extraction
+python3 main.py
+```
+
+This will:
+- Load messages from `dc_tracker.json`
+- Extract trading actions using LLM
+- Store results in database
+- Display statistics
+
+### 3. View Dashboard
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Opens a web dashboard to:
+- View extracted trading actions
+- Filter by confidence, action type, symbol
+- See statistics and recent messages
 
 ## Data
 
