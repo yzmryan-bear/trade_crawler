@@ -1,0 +1,30 @@
+# Application Configuration
+
+# PDF Settings (initial)
+pdf:
+  file_path: "2024:10-2025:08_yuanzidan_dc_track.pdf"
+  encoding: "utf-8"
+
+# Extraction Settings
+extraction:
+  confidence_threshold: 0.7
+  llm_model: "gpt-4"  # or "claude-3-opus-20240229"
+  max_retries: 3
+
+# Database Settings
+database:
+  type: "sqlite"
+  path: "./data/trading_actions.db"
+
+# UI Settings
+ui:
+  port: 8501
+  host: "localhost"
+
+# Future: Platform Settings (Discord/Telegram)
+# platforms:
+#   discord:
+#     channel_ids: []
+#   telegram:
+#     channel_ids: []
+
