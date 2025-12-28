@@ -53,3 +53,8 @@ Thumbs.db
 # Project specific
 data/
 outputs/
+
+# Temporary extraction files
+pdf_extracted_text_sample.txt
+extract_pdf_to_json.py
+EXTRACT_INSTRUCTIONS.md
