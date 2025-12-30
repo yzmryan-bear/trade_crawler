@@ -2,19 +2,16 @@
 python-dotenv>=1.0.0
 pyyaml>=6.0
 
-# PDF processing
-PyPDF2>=3.0.0
-pdfplumber>=0.10.0
-
 # LLM/AI integration
 openai>=1.0.0
 anthropic>=0.7.0
 
-# Database
-sqlalchemy>=2.0.0
+# Database (SQLite is built-in, but we can use sqlalchemy for future PostgreSQL)
+# sqlalchemy>=2.0.0  # Optional for now
 
-# UI (optional - can choose Streamlit or another)
+# UI
 streamlit>=1.28.0
+pandas>=2.0.0
 
 # Utilities
 pydantic>=2.0.0
